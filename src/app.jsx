@@ -20,12 +20,16 @@ function App() {
   }
 
   function addItem() {
-    if (editIndex !== null || editTitle === "" || inputText === "") {
+    var trimmedTitle = editTitle.trim();
+    var trimmedText = inputText.trim();
+    trimmedText = trimmedText.slice(0, 50);
+    trimmedTitle = trimmedTitle.slice(0, 70);
+    if (editIndex !== null || trimmedTitle === "" || trimmedText === "") {
       return;
     } else {
       setItems((prevItems) => [
         ...prevItems,
-        { title: editTitle, text: inputText },
+        { title: trimmedTitle, text: trimmedText },
       ]);
       setInputText("");
       setEditTitle("");

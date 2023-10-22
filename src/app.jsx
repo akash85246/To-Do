@@ -22,8 +22,6 @@ function App() {
   function addItem() {
     var trimmedTitle = editTitle.trim();
     var trimmedText = inputText.trim();
-    trimmedText = trimmedText.slice(0, 50);
-    trimmedTitle = trimmedTitle.slice(0, 70);
     if (editIndex !== null || trimmedTitle === "" || trimmedText === "") {
       return;
     } else {
@@ -67,6 +65,7 @@ function App() {
             onChange={handleTitleChange}
             type="text"
             value={editTitle}
+            maxLength={35}
             placeholder="Edit Title"
           />
           <input

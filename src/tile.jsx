@@ -9,8 +9,8 @@ function ToDoItem(props) {
   return (
     <div style={{ display: "flex", flexDirection: "column" }} className="block">
       <div>
-        <h3 style={{ textAlign: "left",margin:"10px" }}>{props.title}</h3>
-        <li style={{ listStyleType: "none" }}>{props.text}</li>
+        <h3 style={{ textAlign: "left", margin: "10px" }}>{props.title}</h3>
+        <div className="scrollable-li">{props.text}</div>
       </div>
       <div style={{ display: "flex" }}>
         <button

@@ -23,7 +23,7 @@ function App() {
     var trimmedTitle = editTitle.trim();
     var trimmedText = inputText.trim();
     if (editIndex !== null || trimmedTitle === "" || trimmedText === "") {
-      return;
+      alert("Please Enter Title and Description");
     } else {
       setItems((prevItems) => [
         ...prevItems,

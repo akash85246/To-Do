@@ -114,6 +114,7 @@ li {
   overflow-y: scroll;
   color: white;
   padding: 10px;
+  text-align: left;
   overflow-wrap: break-word;
 }
 @media only screen and (max-width: 810px) {
